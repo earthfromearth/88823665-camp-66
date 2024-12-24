@@ -21,32 +21,32 @@
             
               <form>
                 <div class="row mb-3">
-                  <label for="name" class="col-sm-2 col-form-label">ชื่อ<span class="star">*</span></label>
-                  <div class="col-sm-10">
+                  <label for="name" class="col-sm-5 col-form-label">ชื่อ<span class="star">*</span></label>
+                  <div class="col-sm-7">
                   <input type="text" class="form-control" id="name" placeholder="ชื่อ" required />
                 </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="name" class="col-sm-2 col-form-label">สกุล<span class="star">*</span></label>
-                    <div class="col-sm-10">
+                    <label for="name" class="col-sm-5 col-form-label">สกุล<span class="star">*</span></label>
+                    <div class="col-sm-7">
                     <input type="text" class="form-control" id="name" placeholder="สกุล" required />
                   </div>
                   </div>
-                <div class="row mb-3"">
-                  <label for="dob" class="col-sm-2 col-form-label">วัน/เดือน/ปีเกิด</label>
-                  <div class="col-sm-10">
+                <div class="row mb-3">
+                  <label for="dob" class="col-sm-5 col-form-label">วัน/เดือน/ปีเกิด</label>
+                  <div class="col-sm-7">
                     <input type="date" class="form-control" id="dob" placeholder="วัน/เดือน/ปีเกิด">
                 </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="age" class="col-sm-2 col-form-label">อายุ</label>
-                    <div class="col-sm-10">
+                    <label for="age" class="col-sm-5 col-form-label">อายุ</label>
+                    <div class="col-sm-7">
                         <input type="number" class="form-control" id="age" placeholder="อายุ">
                     </div>
                 </div>    
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">เพศ</label>
-                  <div class="col-sm-10">
+                  <label class="col-sm-5 col-form-label">เพศ</label>
+                  <div class="col-sm-7">
                      <div class="form-check">
                     <input class="form-check-input" type="radio" name="gender" id="male" value="male" />
                     <label class="form-check-label" for="male">ชาย</label>
@@ -58,20 +58,35 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="file" class="form-label">รูป</label>
-                  <input class="form-control" type="file" id="file" />
+                  <label for="file" class="col-sm-5 col-form-label">รูป</label>
+                  <div class="col-sm-7">
+                    <input class="form-control" type="file" id="file" />
+                  </div>
+                  
                 </div>
-                <div class="mb-3">
-                  <label for="color" class="form-label">สีที่ชอบ</label>
-                  <select class="form-select" id="color">
+                <div class="row mb-3">
+                  
+                    <label for="address" class="col-sm-5 col-form-label">ที่อยู่</label>
+                  
+                  <div class="col-sm-7">
+                      <textarea class="form-control" id="address" rows="3" placeholder="260 Vinewood St, Detroit, MI 48216, United States"></textarea>
+                  </div>
+              </div>    
+                <div class="row mb-3">
+                  <label for="color" class="col-sm-5 col-form-label">สีที่ชอบ</label>
+                  <div class="col-sm-7">
+                    <select class="form-select" id="color">
                     <option selected>สีแดง</option>
                     <option>สีน้ำเงิน</option>
                     <option>สีเขียว</option>
                   </select>
+                  </div>
+                  
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">เพลงที่ชอบ</label>
-                  <div class="form-check">
+                <div class="row mb-3">
+                  <label class="col-sm-5 col-form-label ">เพลงที่ชอบ</label>
+                  <div class="col-sm-7">
+                    <div class="form-check">
                     <input class="form-check-input" type="radio" name="music" id="pop" value="pop" checked />
                     <label class="form-check-label" for="pop">เพื่อชีวิต</label>
                   </div>
@@ -83,14 +98,21 @@
                     <input class="form-check-input" type="radio" name="music" id="other" value="other" />
                     <label class="form-check-label" for="other">อื่นๆ</label>
                   </div>
+                  </div>
+
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="consent" checked />
                   <label class="form-check-label" for="consent">ยินยอมให้เก็บข้อมูล</label>
                 </div>
                 <div class="d-flex gap-2">
-                  <button type="reset" class="btn btn-secondary">Reset</button>
+                  <div class="col-sm-11">
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                  </div>
+                  <div class="col-sm10">
                   <button type="submit" class="btn btn-success">Submit</button>
+                  </div>
+                  
                 </div>
               </form>
             
