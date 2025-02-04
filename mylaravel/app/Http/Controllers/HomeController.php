@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     //
     function index(){
-        return view('layouts.home');
+        return view('home');
     }
 }

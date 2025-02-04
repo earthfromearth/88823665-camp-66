@@ -8,6 +8,6 @@ class LoginController extends Controller
 {
     //
     function index(){
-        return view('layouts.login');
+        return view('login');
     }
 }
