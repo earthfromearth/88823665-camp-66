@@ -21,6 +21,6 @@ class RegisterController extends Controller
         $muser->save();
 
 
-        //return redirect('/user');
+        return redirect('/users');
     }
 }
