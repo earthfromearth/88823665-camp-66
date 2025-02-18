@@ -10,17 +10,27 @@ use App\Http\Controllers\ProductController;
 
 use App\Http\Middleware\CheckLogin;
 
-Route::get('/product', [ProductController::class, 'index'])->middleware([CheckLogin::class,]);
-Route::post('/product', [ProductController::class, 'store'])->middleware([CheckLogin::class,]);
+Route::middleware([CheckLogin::class])->group(function () {
+    Route::get("/users", [UserController::class, 'index']);
+    Route::get("/user/{id}", [UserController::class, 'edit']);
+    Route::put("/user", [UserController::class, 'edit_action']);
+    Route::delete("/user", [UserController::class, 'delete']);
+
+    Route::get('/product', [ProductController::class, 'index'])->middleware([CheckLogin::class,]);
+    Route::post('/product', [ProductController::class, 'store'])->middleware([CheckLogin::class,]);
+});
+
+
 
 Route::get("/login",
     [LoginController::class, 'index']);
 
-Route::get("/login",
+Route::post("/login",
     [LoginController::class, 'login']);
 
 Route::get("/logout", function(){
-    session()->forgot('user');
+    session()->forget('user');
+    session()->flush();
     return redirect('/login');}
     );
 
@@ -37,10 +47,6 @@ Route::post("/register",
     [RegisterController::class, 'create']);
 
 
-Route::get("/users", [UserController::class, 'index']);
-Route::get("/user/{id}", [UserController::class, 'edit']);
-Route::put("/user", [UserController::class, 'edit_action']);
-Route::delete("/user", [UserController::class, 'delete']);
 
 
 Route::get('/mycontroller/{id?}',

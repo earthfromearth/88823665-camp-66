@@ -19,6 +19,10 @@ class CheckLogin
         if(!isset($user)){
             return redirect('/login');
         }
+        // $user = seesion('user');
+        // if($user->id == null || $user-> == null){
+        //     return redirect('/login');
+        // }
         return $next($request);
     }
 }
